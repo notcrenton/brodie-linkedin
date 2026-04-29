@@ -10,7 +10,7 @@ import {
 } from '@nestjs/common';
 import {
   CopilotRuntime,
-  OpenAIAdapter,
+  AnthropicAdapter,
   copilotRuntimeNodeHttpEndpoint,
   copilotRuntimeNextJSAppRouterEndpoint,
 } from '@copilotkit/runtime';
@@ -39,18 +39,18 @@ export class CopilotController {
   @Post('/chat')
   chatAgent(@Req() req: Request, @Res() res: Response) {
     if (
-      process.env.OPENAI_API_KEY === undefined ||
-      process.env.OPENAI_API_KEY === ''
+      process.env.ANTHROPIC_API_KEY === undefined ||
+      process.env.ANTHROPIC_API_KEY === ''
     ) {
-      Logger.warn('OpenAI API key not set, chat functionality will not work');
+      Logger.warn('Anthropic API key not set, chat functionality will not work');
       return;
     }
 
     const copilotRuntimeHandler = copilotRuntimeNodeHttpEndpoint({
       endpoint: '/copilot/chat',
       runtime: new CopilotRuntime(),
-      serviceAdapter: new OpenAIAdapter({
-        model: 'gpt-4.1',
+      serviceAdapter: new AnthropicAdapter({
+        model: process.env.CLAUDE_MODEL || 'claude-opus-4-7',
       }),
     });
 
@@ -65,10 +65,10 @@ export class CopilotController {
     @GetOrgFromRequest() organization: Organization
   ) {
     if (
-      process.env.OPENAI_API_KEY === undefined ||
-      process.env.OPENAI_API_KEY === ''
+      process.env.ANTHROPIC_API_KEY === undefined ||
+      process.env.ANTHROPIC_API_KEY === ''
     ) {
-      Logger.warn('OpenAI API key not set, chat functionality will not work');
+      Logger.warn('Anthropic API key not set, chat functionality will not work');
       return;
     }
     const mastra = await this._mastraService.mastra();
@@ -95,8 +95,8 @@ export class CopilotController {
       endpoint: '/copilot/agent',
       runtime,
       // properties: req.body.variables.properties,
-      serviceAdapter: new OpenAIAdapter({
-        model: 'gpt-4.1',
+      serviceAdapter: new AnthropicAdapter({
+        model: process.env.CLAUDE_MODEL || 'claude-opus-4-7',
       }),
     });
 
