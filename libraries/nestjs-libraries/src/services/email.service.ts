@@ -41,16 +41,26 @@ export class EmailService {
     addTo: 'top' | 'bottom',
     replyTo?: string
   ) {
-    return this._temporalService.client
-      .getRawClient()
-      ?.workflow.signalWithStart('sendEmailWorkflow', {
-        taskQueue: 'main',
-        workflowId: 'send_email',
-        signal: 'sendEmail',
-        args: [{ queue: [] }],
-        signalArgs: [{ to, subject, html, replyTo, addTo }],
-        workflowIdConflictPolicy: 'USE_EXISTING',
-      });
+    try {
+      return await this._temporalService.client
+        .getRawClient()
+        ?.workflow.signalWithStart('sendEmailWorkflow', {
+          taskQueue: 'main',
+          workflowId: 'send_email',
+          signal: 'sendEmail',
+          args: [{ queue: [] }],
+          signalArgs: [{ to, subject, html, replyTo, addTo }],
+          workflowIdConflictPolicy: 'USE_EXISTING',
+        });
+    } catch (err) {
+      console.warn(
+        '[EmailService] Temporal unreachable, dropping email to',
+        to,
+        '-',
+        (err as Error)?.message
+      );
+      return undefined;
+    }
   }
 
   async sendEmailSync(
