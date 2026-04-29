@@ -1,6 +1,19 @@
 import { MantineWrapper } from '@gitroom/react/helpers/mantine.wrapper';
+import type { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: 'Brodie LinkedIn',
+  description:
+    "Draft, schedule, and analyze LinkedIn posts in Connor's voice — powered by Claude and grounded in Brodie's voice library.",
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
+};
+
 import '../global.scss';
 import 'react-tooltip/dist/react-tooltip.css';
 import '@copilotkit/react-ui/styles.css';

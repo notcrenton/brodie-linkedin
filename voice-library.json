@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "owner": "Connor Renton",
+    "owner_handle": "connorrenton",
+    "purpose": "Few-shot voice examples for the Brodie LinkedIn post generator. Each entry is a hand-picked top performer used to ground Claude in Connor's voice. Engagement metrics included so we can rank, A/B, and surface top performers as the highest-weighted examples.",
+    "scraped_at": "2026-04-29",
+    "platform": "linkedin",
+    "language": "en"
+  },
+  "posts": [
+    {
+      "id": "7398748724140756992",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7398748724140756992/",
+      "genre": "milestone-celebration",
+      "topic": "Forbes feature, adult rec sports as a category",
+      "body": "🚨 Brodie just made Forbes…\n\nAnd it's bigger than a headline.\n\nAdults aren't just looking for sports. They're looking for belonging.\n\n1 in 4 adults play rec sports…. Now name me one brand who speaks to them? \n\nThe world is finally seeing what we've known all along:\n\nAdult sports is the next multi-billion-dollar industry \n\n… \n\nand Brodie is leading the way.\n\nRead the full article here 👇\nhttps://lnkd.in/giAPi_NR\n\nShoutout to our amazing team Sohaib Sabrani Shane Stirling Faith Meek Alif Morshed Roger Gopaul and so many more who make brodie what it is.",
+      "reactions": 232,
+      "comments": 23,
+      "reposts": null
+    },
+    {
+      "id": "7434634538883907584",
+      "url": "https://www.linkedin.com/posts/connorrenton_nike-is-looking-for-2-district-managers-across-activity-7434634538883907584-Pb4X",
+      "genre": "talent-broadcast-hiring",
+      "topic": "DM hiring with Nike pattern-interrupt opener",
+      "body": "Nike is looking for 2 District Managers across Canada... 👀\n\nBut it's not Nike. It's actually growing faster.\n\n35,000+ athletes. 20+ cities. Scaling to 50+.\n\nWe need two operators who can own entire regions. Launch new markets. Coach GMs and League Managers to run their locations like it's theirs. Find what's broken, fix it, and make sure every single league night feels like the best night of the week.\n\nThis isn't a \"manage from a distance\" role. This is a \"build leaders, build systems, and trust your people\" role.\n\nGround floor. Real autonomy. Top of class comp.\n\nCanada West & Ontario. Based in Toronto. Full details below.\n\nIf you a Killer... 👇\nhttps://lnkd.in/eM442ZiT",
+      "reactions": 84,
+      "comments": 11,
+      "reposts": 5
+    },
+    {
+      "id": "7430363103416143874",
+      "url": "https://www.linkedin.com/posts/connorrenton_the-nba-is-looking-for-a-new-vp-of-finance-activity-7430363103416143874-LS66",
+      "genre": "talent-broadcast-hiring",
+      "topic": "VP Finance hiring with NBA pattern-interrupt opener",
+      "body": "The NBA is looking for a new VP of finance...\n\n200k, equity options, crazy package... But its not the NBA. Its actually 9X bigger.\n\nI am building the NBA for the everyday athlete.\n\nNot for pros but for the millions who still play, compete, and show up every week.\n\n11,000+ games a year.\n20+ cities.\nMore hoops than the NBA has ever run...\nSorry Adam Silver 🫥 \n\nNow we're hiring a VP of finance to own FP&A, GTM, and forecasting.\n\nIf you've ever believed sport, culture, and community deserve a bigger stage... man, this is it.\n\nJoin the super team 👇 \nDm me",
+      "reactions": 116,
+      "comments": 5,
+      "reposts": 9
+    },
+    {
+      "id": "7415067408341778432",
+      "url": "https://www.linkedin.com/posts/connorrenton_i-want-you-to-run-the-nba-actually-activity-7415067408341778432-aP9-",
+      "genre": "talent-broadcast-hiring",
+      "topic": "Multi-region commissioner hiring with NBA pattern-interrupt",
+      "body": "I want you to run the NBA 👀 🏀 \n\nActually ... it's a league 9× bigger than the NBA.\n\nI am building the next NBA for the everyday athlete.\n\nNot for pros but for the millions who still play, compete, and show up every week.\n\n11,000+ games a year.\n20+ cities.\nMore hoops than the NBA has ever run...\nSorry Adam Silver 🫥 \n\nNow we're hiring 4 commissioners aka District Managers to run entire regions:\n\nUSA (With focus on New York City)\nOntario (20+ locations already)\nCanada West\nCanada East\n\nIf you've ever believed sport, culture, and community deserve a bigger stage... man, this is it.\n\nJoin the super team 👇 \nhttps://lnkd.in/gA3JQ2V5",
+      "reactions": 202,
+      "comments": 29,
+      "reposts": 9
+    }
+  ],
+  "voice_notes": {
+    "patterns_observed": [
+      "Pattern-interrupt opener: 'X is looking for Y' (where X is a household-name brand) → reveals it's actually Brodie",
+      "Short declarative sentences. Lots of single-line breaks for rhythm.",
+      "Stat blocks formatted vertically: '11,000+ games a year. / 20+ cities.'",
+      "Casual contractions and lowercase ('its not', 'man, this is it', 'a Killer')",
+      "Emojis used sparingly as punctuation, not decoration: 👀 🫥 👇 🏀",
+      "Always closes with a CTA: '👇' arrow + link or 'Dm me'",
+      "Self-deprecating jabs at incumbents: 'Sorry Adam Silver 🫥'",
+      "Frames Brodie in incumbent-comparable scale: 'NBA for the everyday athlete', '9× bigger than the NBA'"
+    ],
+    "do_not_imitate": [
+      "Corporate buzzwords: 'leverage', 'synergy', 'best-in-class' — use 'top of class' instead",
+      "Long paragraphs without line breaks",
+      "Generic CTA language: 'reach out', 'connect with me' — use 'Dm me' or '👇'",
+      "Hashtag walls",
+      "Em-dashes in dialogue/narrative — Connor uses '...' for pauses"
+    ]
+  }
+}
